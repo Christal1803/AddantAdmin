@@ -2,8 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\core",
+    "\\src\\app\\core\\Components",
+    "\\src\\app\\core\\Components\\login",
+    "\\src\\app\\shared",
+    "\\src\\app\\shared\\Components",
+    "\\src\\app\\shared\\Components\\layout",
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\shared",
+  "SelectedNode": "\\src\\app\\shared\\Components",
   "PreviewInSolutionExplorer": false
 }
