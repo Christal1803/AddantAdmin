@@ -27,12 +27,7 @@ export class LoginComponent implements OnInit {
       name: new FormControl(this.user.name, [
         Validators.required,
       ]),
-      nickname: new FormControl(this.user.nickname, [
-        Validators.maxLength(10),
-      ]),
-      email: new FormControl(this.user.email, [
-        Validators.required,
-      ]),
+      
       password: new FormControl(this.user.password, [
         Validators.required,
         Validators.minLength(15),
@@ -42,14 +37,6 @@ export class LoginComponent implements OnInit {
 
   get name() {
     return this.login.get('name')!;
-  }
-
-  get nickname() {
-    return this.login.get('nickname')!;
-  }
-
-  get email() {
-    return this.login.get('email')!;
   }
 
   get password() {
@@ -67,8 +54,6 @@ export class LoginComponent implements OnInit {
     this.user = this.login.value;
 
     console.info('Name:', this.user.name);
-    console.info('Nickname:', this.user.nickname);
-    console.info('Email:', this.user.email);
     console.info('Password:', this.user.password);
   }
 
