@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
+import { BlogModule } from './pages/blog/blog.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { SharedModule } from './shared/shared.module';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
+    BlogModule,
     SharedModule,
     AppRoutingModule
   ],
