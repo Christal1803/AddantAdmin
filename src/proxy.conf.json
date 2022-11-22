@@ -1,0 +1,12 @@
+{
+  "/api/*": {
+    "target": "http://192.168.1.3:80/",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "logLevel": "debug",
+    "timeout": 6000000
+  }
+}

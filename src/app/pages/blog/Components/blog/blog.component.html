@@ -1,1 +1,399 @@
-<p>blog works!</p>
+<!-- End of Topbar -->
+<!-- Begin Page Content -->
+<div class="container-fluid">
+  <div class="container-fluid">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-6">
+            <h2>Blog List</h2>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              NEW BLOG
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Button trigger modal -->
+      <!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+      </button>-->
+      <!-- Modal -->
+      <div class="modal fade modal-xl" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Blogs</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body modal-xl">
+              <div id="content">
+                <div class="container-fluid">
+                  <div>
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800"></h1>
+                    <p class="mb-4">
+                    </p>
+                  </div>
+                  <div class="container-fluid ">
+
+
+                    <form [formGroup]="form">
+
+                      <div class="row ">
+                        <div class="col ">
+                          <div class="mb-3 ">
+                            <label for="">Blog Name:</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="blogName" placeholder="Enter Blog Name "
+                                   formControlName="Blog_name" required>
+                            <!--<div *ngIf="Blog_name.invalid && (Blog_name.dirty || Blog_name.touched)"
+                                 class="alert alert-danger">
+
+                              <div *ngIf="Blog_name.errors?.['required']">
+                                Name is required.
+                              </div>
+                              <div *ngIf="Blog_name.errors?.['minlength']">
+                                Name must be at least 4 characters long.
+                              </div>
+                              <div *ngIf="Blog_name.errors?.['forbiddenName']">
+                                Name cannot be Bob.
+                              </div>
+                            </div>-->
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="mb-3">
+                            <label for="">Created By:</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="createdby" placeholder="Created By"
+                                   formControlName="Created_by"
+                                   required>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="mb-3">
+                            <label for="">Profile picture:</label>
+                            <input class="form-control"
+                                   type="file"
+                                   id="profilePicture"
+                                   formControlName="Profile_picture"
+                                   accept="image/png, image/jpeg, image/webp" (change)="selectprofilePicture($event)"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="mb-3">
+                            <label for="">Cover picture:</label>
+                            <input class="form-control"
+                                   type="file"
+                                   id="coverPicture"
+                                   formControlName="Cover_picture"
+                                   accept="image/png, image/jpeg, image/webp" (change)="selectcoverPicture($event)"/>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="mb-3">
+                            <label for="">Banner picture:</label>
+                            <input class="form-control"
+                                   type="file"
+                                   id="bannerPicture"
+                                   formControlName="Banner_picture"
+                                   accept="image/png, image/jpeg, image/webp" (change)="selectbannerPicture($event)" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col">
+                          <div class="mb-3">
+                            <label for="">Description:</label>
+
+                            <textarea id="w3review" name="w3review" rows="4" cols="50" class="form-control"
+                                      id="Description"
+                                      placeholder="Description " formControlName="Description"></textarea>
+                          </div>
+                        </div>
+                        <div class="col">
+
+                          <div class="mb-3">
+                            <label for="">created on:</label>
+                            <input type="date"
+                                   class="form-control"
+                                   id="createdon"
+                                   formControlName="Created_on"
+                                   placeholder="Date " />
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                    </form>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" (click)="saveBlog()">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <table class="table table-striped table-hover w-1" style="background-color: #ffff;">
+        <thead>
+          <tr>
+            <th>
+              <!--<span class="custom-checkbox">
+                <input type="checkbox" id="selectAll">
+                <label for="selectAll"></label>
+              </span>-->
+            </th>
+            <th>Blog Name</th>
+            <th>Creator</th>
+
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <!--<span class="custom-checkbox">
+                <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                <label for="checkbox1"></label>
+              </span>-->
+            </td>
+            <td>Thomas Hardy</td>
+
+            <td>Thomas Hardy</td>
+            <td>20/12/2022</td>
+            <td class="d-flex">
+              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><img src="/assets/img/edit.svg" data-toggle="tooltip" title="Edit"></a>
+
+              <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><img src="/assets/img/delete.svg" data-toggle="tooltip" title="Delete"></a>
+            </td>
+
+
+          </tr>
+          <tr>
+            <td>
+              <!--<span class="custom-checkbox">
+                <input type="checkbox" id="checkbox2" name="options[]" value="1">
+                <label for="checkbox2"></label>
+              </span>-->
+            </td>
+            <td>Thomas Hardy </td>
+
+            <td>Dominique Perrier</td>
+            <td>20/12/2022</td>
+            <td>
+              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><img src="/assets/img/edit.svg" data-toggle="tooltip" title="Edit"></a>
+
+              <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><img src="/assets/img/delete.svg" data-toggle="tooltip" title="Delete"></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--<span class="custom-checkbox">
+                <input type="checkbox" id="checkbox3" name="options[]" value="1">
+                <label for="checkbox3"></label>
+              </span>-->
+            </td>
+            <td>Thomas Hardy</td>
+
+            <td>Maria Anders</td>
+            <td>20/12/2022</td>
+            <td>
+              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><img src="/assets/img/edit.svg" data-toggle="tooltip" title="Edit"></a>
+
+              <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><img src="/assets/img/delete.svg" data-toggle="tooltip" title="Delete"></a>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+      <div class="clearfix">
+        <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+        <ul class="pagination">
+          <li class="page-item disabled"><a href="#">Previous</a></li>
+          <li class="page-item"><a href="#" class="page-link">1</a></li>
+          <li class="page-item"><a href="#" class="page-link">2</a></li>
+          <li class="page-item active"><a href="#" class="page-link">3</a></li>
+          <li class="page-item"><a href="#" class="page-link">4</a></li>
+          <li class="page-item"><a href="#" class="page-link">5</a></li>
+          <li class="page-item"><a href="#" class="page-link">Next</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>
+
+
+
+<!--<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <label for="dateOfBirth">Date of birth</label>
+        <div class="input-group">
+          <input id="dateOfBirth"
+                 class="form-control"
+                 placeholder="yyyy-mm-dd"
+                 name="dp"
+                 ngbDatepicker
+                 #dp="ngbDatepicker" />
+          <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button"></button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open()">Launch demo modal</button>
+
+<hr />
+
+<pre>{{ closeResult }}</pre>-->
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        <a class="btn btn-primary" href="login.html">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<!--<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+<!-- Core plugin JavaScript-->
+<!--<script src="/assets/vendor/jquery-easing/jquery.easing.min.js"></script>-->
+<!-- Custom scripts for all pages-->
+<!--<script src="/assets/js/admin.min.js"></script>-->
+<!---------Font awesome-->
+<!--<link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">-->
+
+<div class="container">
+  <form [formGroup]="enquiryForm">
+
+    <div class="row ">
+      <div class="col ">
+        <div class="mb-3 ">
+          <label for="">First Name:</label>
+          <input type="text"
+                 class="form-control"
+                 id="blogName" placeholder="Enter First Name "
+                 formControlName="first_name" required>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <label for="">Last Name:</label>
+          <input type="text"
+                 class="form-control"
+                 id="Last Name" placeholder="Last Name"
+                 formControlName="last_name"
+                 required>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label for="">Email:</label>
+          <input class="form-control"
+                 type="text"
+                 id="Email"
+                 formControlName="email" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <label for="">Mobile:</label>
+          <input class="form-control"
+                 type="text"
+                 id="Mobile"
+                 formControlName="mobile" />
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label for="">Subject:</label>
+          <input class="form-control"
+                 type="text"
+                 id="Subject"
+                 formControlName="subject" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <label for="">Message:</label>
+
+          <textarea id="Message" name="Message" rows="4" cols="50" class="form-control"
+                    placeholder="Message " formControlName="message"></textarea>
+        </div>
+      </div>
+      <div class="col">
+
+        <!--<div class="mb-3">
+        <label for="">created on:</label>
+        <input type="date"
+               class="form-control"
+               id="createdon"
+               formControlName="Created_on"
+               placeholder="Date " />
+      </div>-->
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" (click)="saveEnquiry()">Save changes</button>
+
+
+  </form>
+
+</div>
+

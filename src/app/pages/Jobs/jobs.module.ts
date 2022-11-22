@@ -12,6 +12,6 @@ import { JobsComponent } from './Components/jobs/jobs.component';
   imports: [
     CommonModule,
     JobsRoutingModule
-  ]
+  ],
 })
 export class JobsModule { }
