@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { BlogRoutingModule } from './blog-routing.module';
 import { BlogComponent } from './Components/blog/blog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -11,7 +13,13 @@ import { BlogComponent } from './Components/blog/blog.component';
   ],
   imports: [
     CommonModule,
-    BlogRoutingModule
+    BlogRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
+  exports: [
+    BlogComponent
   ]
 })
 export class BlogModule { }

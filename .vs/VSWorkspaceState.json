@@ -1,12 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.angular",
     "\\src",
-    "\\src\\app\\core",
+    "\\src\\app",
+    "\\src\\app\\pages",
+    "\\src\\app\\pages\\blog",
+    "\\src\\app\\pages\\blog\\Components",
+    "\\src\\app\\pages\\blog\\Components\\blog",
     "\\src\\app\\shared",
     "\\src\\app\\shared\\Components",
     "\\src\\app\\shared\\Components\\layout"
   ],
+  "SelectedNode": "\\src\\proxy.conf.json",
   "PreviewInSolutionExplorer": false
 }

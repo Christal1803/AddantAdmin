@@ -6,14 +6,20 @@ import { LayoutComponent } from './shared/Components/layout/layout.component';
 
 const routes: Routes = [
   {
+    path: 'board',
+    component: LayoutComponent,
+    
+  },
+  {
     path: '',
-    component: LoginComponent
+    component: LoginComponent ,
+
   },
 
   {
     path: 'blog',
     component: BlogComponent
-  }
+  },
 ];
 
 @NgModule({

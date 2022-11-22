@@ -1,9 +1,19 @@
+
 .body {
   background-image: url('/assets/img/Desktop - 1.png');
-  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 button.btn.login-btn.btn-md.btn-block.w-100 {
   background: #0ec79b;
   color: white;
+}
+
+.card-body.card-spacing {
+  padding: 2.8rem 2.6rem;
+}
+
+h3.mb-4.text-center {
+  font-size: 1.20rem;
 }

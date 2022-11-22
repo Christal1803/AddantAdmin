@@ -3,15 +3,15 @@
     <section class="vh-100">
       <div class="container-fluid py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
             <div class="card shadow-2-strong" style="border-radius: 1rem;">
-              <div class="card-body p-5">
+              <div class="card-body card-spacing">
                 <img src="/assets/img/addantlogowhite.svg" class="img-fluid mx-auto d-block" />
-                <h3 class="mb-3 text-center">Admin</h3>
+                <h3 class="mb-4 text-center"></h3>
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="typeEmailX-2">Username</label>
-                  
+
 
                   <input type="email" id="name" name="name" formControlName="name" placeholder="Your Username" required minlength="1" maxlength="250" class="form-control form-control-md" [class.is-invalid]="name.invalid && (name.dirty || name.touched)">
                   <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback">
@@ -32,11 +32,11 @@
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="typePasswordX-2">Password</label>
-                  
+
 
                   <div class="input-group  has-validation">
                     <input [type]="user.showPassword ? 'text' : 'password'" id="password" name="password" formControlName="password" placeholder="Your Password" required minlength="15" class="form-control form-control-md" [class.is-invalid]="password.invalid && (password.dirty || password.touched)">
-                
+
                     <div *ngIf="password.invalid && (password.dirty || password.touched)" class="invalid-feedback">
                       <div *ngIf="password.errors?.['required']">
                         This field is required.
@@ -46,7 +46,7 @@
                       </div>
                     </div>
                   </div>
-                  
+
                 </div>
                 <button type="button" class="btn  login-btn btn-md btn-block w-100" (click)="validate()" [disabled]="">Login</button>
 
@@ -58,49 +58,4 @@
     </section>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-           
 
