@@ -13,9 +13,28 @@ export class BlogService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
   constructor(private _http: HttpClient) { }
-  saveBlog(categoryBody: any,): Observable<Boolean> {
+  saveBlog(BlogBody: any,): Observable<Boolean> {
     try {
-      return this._http.post(`${this._urlToRequest}/api/Blog/compose`, categoryBody, this._httpOptions).pipe(
+      return this._http.post(`${this._urlToRequest}/api/Blog/compose`, BlogBody, this._httpOptions).pipe(
+        tap((response: any) => {
+          if (response.success) {
+            console.log("Valid response received from server");
+            of(true);
+          } else {
+            of(false);
+          }
+
+        }),
+        catchError(this.handleError<Boolean>())
+      );
+    } catch (exception) {
+      return of(false);
+    }
+  }
+
+  saveBlogImage(BlogBody: any,): Observable<Boolean> {
+    try {
+      return this._http.post(`${this._urlToRequest}api/Blog/DocumentUpload/MediaUpload  `, BlogBody, this._httpOptions).pipe(
         tap((response: any) => {
           if (response.success) {
             console.log("Valid response received from server");
