@@ -5,21 +5,26 @@ import { BlogComponent } from './pages/blog/Components/blog/blog.component';
 import { LayoutComponent } from './shared/Components/layout/layout.component';
 
 const routes: Routes = [
+
   {
     path: 'board',
     component: LayoutComponent,
     
   },
+
+
   {
     path: '',
     component: LoginComponent ,
 
   },
 
+
   {
     path: 'blog',
     component: BlogComponent
   },
+
 ];
 
 @NgModule({
