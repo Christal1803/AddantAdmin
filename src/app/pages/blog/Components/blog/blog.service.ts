@@ -13,6 +13,29 @@ export class BlogService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
   constructor(private _http: HttpClient) { }
+
+
+  getBlogDetail(): Observable<Boolean> {
+    try {
+      return this._http.get(`${this._urlToRequest}/api/Blog/Detail`, this._httpOptions).pipe(
+        tap((response: any) => {
+          if (response.success) {
+            console.log("Valid response received from server");
+            of(true);
+          } else {
+            of(false);
+          }
+
+        }),
+        catchError(this.handleError<Boolean>())
+      );
+    } catch (exception) {
+      return of(false);
+    }
+  }
+
+
+
   saveBlog(categoryBody: any,): Observable<Boolean> {
     try {
       return this._http.post(`${this._urlToRequest}/api/Blog/compose`, categoryBody, this._httpOptions).pipe(

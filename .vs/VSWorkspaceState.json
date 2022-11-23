@@ -11,6 +11,6 @@
     "\\src\\app\\shared\\Components",
     "\\src\\app\\shared\\Components\\layout"
   ],
-  "SelectedNode": "\\src\\proxy.conf.json",
+  "SelectedNode": "\\src\\app\\pages\\blog\\Components\\blog\\blog.component.ts",
   "PreviewInSolutionExplorer": false
 }

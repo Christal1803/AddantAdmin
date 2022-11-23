@@ -1,4 +1,4 @@
-/*body {
+body {
   color: #566787;
   background: #f5f5f5;
   font-family: 'Varela Round', sans-serif;
@@ -46,9 +46,9 @@
 
 
     .table-title .btn i {
-      float: left;
+      float: right;
       font-size: 21px;
-      margin-right: 5px;
+      margin-right: -5px;
     }
 
     .table-title .btn span {
@@ -163,12 +163,71 @@ table.table .avatar {
   float: left;
   margin-top: 10px;
   font-size: 13px;
-}*/
+}
 
-/* Modal styles */
-/*.modal .modal-dialog {*/
-  /*max-width: 400px;*/
-/*}
+Custom checkbox
+.custom-checkbox {
+  position: relative;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  margin: 5px 0 0 3px;
+  z-index: 9;
+}
+
+.custom-checkbox label:before {
+  width: 18px;
+  height: 18px;
+}
+
+.custom-checkbox label:before {
+  content: '';
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  background: white;
+  border: 1px solid #bbb;
+  border-radius: 2px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label:after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  width: 6px;
+  height: 11px;
+  border: solid #000;
+  border-width: 0 3px 3px 0;
+  transform: inherit;
+  z-index: 3;
+  transform: rotateZ(45deg);
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label:before {
+  border-color: #03A9F4;
+  background: #03A9F4;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label:after {
+  border-color: #fff;
+}
+
+.custom-checkbox input[type="checkbox"]:disabled + label:before {
+  color: #b8b8b8;
+  cursor: auto;
+  box-shadow: none;
+  background: #ddd;
+}
+
+Modal styles
+.modal .modal-dialog {
+  max-width: 400px;
+}
 
 .modal .modal-header, .modal .modal-body, .modal .modal-footer {
   padding: 20px 30px;
@@ -204,13 +263,10 @@ table.table .avatar {
 
 .modal form label {
   font-weight: normal;
-}*/
+}
 
 
-/*css*/
-
-
-
+css
 
 
 
@@ -225,19 +281,20 @@ table.table .avatar {
 
 
 
-/*!
- * Start Bootstrap - SB Admin 2 v4.1.3 (https://startbootstrap.com/theme/sb-admin-2)
- * Copyright 2013-2021 Start Bootstrap
- * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin-2/blob/master/LICENSE)
- */
 
-/*!
- * Bootstrap v4.6.0 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
-/*:root {
+
+
+! * Start Bootstrap - SB Admin 2 v4.1.3 (https://startbootstrap.com/theme/sb-admin-2)
+* Copyright 2013-2021 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin-2/blob/master/LICENSE)
+
+
+! * Bootstrap v4.6.0 (https://getbootstrap.com/)
+* Copyright 2011-2021 The Bootstrap Authors
+* Copyright 2011-2021 Twitter, Inc.
+* Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+
+:root {
   --blue: #0ec79b;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -12445,4 +12502,9 @@ footer.sticky-footer {
 
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
-}*/
+}
+
+.plus {
+  color: aquamarine;
+}
+
