@@ -8,6 +8,7 @@ import { BlogService } from './blog.service';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
+  [x: string]: any;
   public first_name: any;
   public last_name: any;
   public email: any;
@@ -18,6 +19,7 @@ export class BlogComponent implements OnInit {
   public coverPicture: any;
   public bannerPicture: any;
   public allPictures = [];
+  public posts: any;
 
   form = new FormGroup({
     Blog_name: new FormControl('', Validators.required),
@@ -41,7 +43,29 @@ export class BlogComponent implements OnInit {
   constructor(private _BlogService: BlogService) { }
 
   ngOnInit(): void {
+
+    this.getBlog();
+   
+
+
   }
+
+
+
+  getBlog() {
+    this._BlogService.getBlogDetail()
+      .subscribe((response: any) => {
+        if(response) {
+          this.posts = response;
+          console.log(this.posts);
+        } else {
+          console.log("hello error")
+
+        }
+        
+      });
+  }
+
   selectprofilePicture(event: any) {
     debugger
     if (event.target.files.length > 0) {
@@ -90,7 +114,7 @@ export class BlogComponent implements OnInit {
       content: "QEA=",
         ProfilePicUrl: "sample string 5",
         ProfilePic  : "QEA =",
-    "IsDeleted": true, 
+    "IsDeleted": false, 
 
       }
 
