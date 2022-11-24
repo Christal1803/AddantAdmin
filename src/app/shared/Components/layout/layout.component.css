@@ -12247,6 +12247,7 @@ body.sidebar-toggled footer.sticky-footer {
 
 .icon-size {
   height: 28px;
+  margin-top: 5px;
 }
 
 
@@ -12257,9 +12258,7 @@ i.fas.fas-not {
   right: 80px;
 }
 
-ul#accordionSidebar {
-  position: absolute;
-}
+
 
 img.img-profile.rounded-circle {
   left: 0px;
@@ -12290,13 +12289,9 @@ img.img-profile.rounded-circle {
   margin-right: 105rem;
 }
 
-.profile-round-circle {
-  margin-left: -45px;
-}
 
-span.ml-3.sidebar-heads {
-  margin: 25px 10px;
-}
+
+
 
 
 .modal .modal-dialog {

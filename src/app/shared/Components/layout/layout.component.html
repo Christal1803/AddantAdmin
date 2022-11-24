@@ -2,91 +2,96 @@
 
 <div id="wrapper">
 
-
   <!-- Sidebar -->
-  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+  <div class="sidebar_admin">
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-    <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex " href="index.html">
-      <div class="sidebar-brand-icon ">
+      <!-- Sidebar - Brand -->
+      <li class="nav-item">
+        <a class="nav-link">
+          <img src="assets/img/addantwhiteww.svg" class="icon-size d-inline-block s-logo"><img src="assets/img/addantlogowhite1 (1).svg" class="img-fluid l-logo" />
 
-        <!--<img src="/assets/img/addantlogo.svg">-->
-      </div>
+          <style>
+            .sidebar:hover .l-logo {
+              visibility: inherit;
+              transition: width 1s;
+            }
 
-    </a>
+            .sidebar:hover .s-logo {
+              visibility: hidden;
+              transition: width 1s;
+            }
 
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+            .l-logo {
+              margin-left: auto;
+              margin-right: auto;
+              margin-left: auto;
+              margin-right: auto;
+              margin-bottom: 17px;
+              height: 45px;
+              visibility: hidden;
+            }
+          </style>
+        </a>
+      </li>
 
-    <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-      <a class="nav-link text-center" href="index.html">
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
 
-        <!--<span>Admin Panel</span>-->
-      </a>
-    </li>
+      <!-- Nav Item - Dashboard -->
+      <!-- Divider -->
+      <hr class="sidebar-divider">
 
-    <!-- Divider -->
-    <hr class="sidebar-divider">
+      <!-- Nav Item - Pages Collapse Menu -->
 
-    <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item ">
-      <a class="nav-link collapsed" href="#lifeataddant" routerLink="/lifeataddant" data-toggle="" data-target="#collapseUtilities"
-         aria-expanded="true" aria-controls="collapseUtilities">
+      <li class="nav-item">
+        <a class="nav-link">
+          <img src="assets/img/Lifeat.svg" class="icon-size"><span class="ml-3 sidebar-heads">Life at addant</span>
+        </a>
+      </li>
 
-        <img src="assets/img/Lifeat.svg" class="icon-size"><span class="ml-3 sidebar-heads">Life at addant</span>
-      </a>
 
-    </li>
-
-    <!-- Divider -->
-    <!-- Heading -->
-    <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="#career" routerLink="/career" data-toggle="" data-target="#collapsePages"
-         aria-expanded="true" aria-controls="collapsePages">
-
-        <img src="assets/img/GraduationCap.svg" class="icon-size"><span class="ml-3 sidebar-heads">Job</span>
-
-      </a>
-      <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-          <h6 class="collapse-header">Login Screens:</h6>
-          <a class="collapse-item" href="login.html">Login</a>
-          <a class="collapse-item" href="register.html">Register</a>
-          <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-          <div class="collapse-divider"></div>
+      <!-- Heading -->
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <img src="assets/img/GraduationCap.svg" class="icon-size"><span class="ml-3 sidebar-heads">Career</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Career:</h6>
+            <a class="collapse-item">Candidate List</a>
+            <a class="collapse-item">Post job</a>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
 
-    <!-- Nav Item - Charts -->
-    <li class="nav-item">
-      <a class="nav-link collapsed" routerLink="" data-toggle="" data-target="#collapseUtilities"
-         aria-expanded="true" aria-controls="collapseUtilities">
-        <img src="assets/img/Notebook.svg" class="icon-size"><span class="ml-3 sidebar-heads">Blogs</span>
-      </a>
-    </li>
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link">
+          <img src="assets/img/Notebook.svg" class="icon-size"><span class="ml-3 sidebar-heads">Blogs</span>
+        </a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link">
+          <img src="assets/img/Messages.svg" class="icon-size"><span class="ml-3 sidebar-heads">Messages</span>
+        </a>
+      </li>
 
 
 
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="#contact" routerLink="/contact" data-toggle="" data-target="#collapseUtilities"
-         aria-expanded="true" aria-controls="collapseUtilities">
-        <img src="assets/img/Messages.svg" class="icon-size"><span class="ml-3 sidebar-heads">Messages</span>
-      </a>
-    </li>
-
-    <!-- Nav Item - Tables -->
-    <!-- Divider -->
-  </ul>
+    </ul>
+  </div>
+ 
   <!-- End of Sidebar -->
   <!-- Content Wrapper -->
   <div id="content-wrapper" class="d-flex flex-column">
 
     <!-- Main Content -->
-    <div id="content nav-align">
+    <div id="content">
+
       <!-- Topbar -->
       <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -95,39 +100,19 @@
           <i class="fa fa-bars"></i>
         </button>
 
-        <!-- Topbar Search -->
-        <!--<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-          <div class="input-group">
-            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                   aria-label="Search" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-              <button class="btn btn-primary" type="button">
-                <i class="fas fa-search fa-sm"></i>
-              </button>
-            </div>
-          </div>
-        </form>-->
         <!-- Topbar Navbar -->
         <ul class="navbar-nav ml-auto">
-          <li>
-            <i style='font-size:20px' class='fas fas-not'>&#xf0f3;</i>
-          </li>
-
 
           <!-- Nav Item - Search Dropdown (Visible Only XS) -->
           <li class="nav-item dropdown no-arrow d-sm-none">
-            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-search fa-fw"></i>
             </a>
             <!-- Dropdown - Messages -->
-            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                 aria-labelledby="searchDropdown">
+            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
               <form class="form-inline mr-auto w-100 navbar-search">
                 <div class="input-group">
-                  <input type="text" class="form-control bg-light border-0 small"
-                         placeholder="Search for..." aria-label="Search"
-                         aria-describedby="basic-addon2">
+                  <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                   <div class="input-group-append">
                     <button class="btn btn-primary" type="button">
                       <i class="fas fa-search fa-sm"></i>
@@ -139,88 +124,142 @@
           </li>
 
           <!-- Nav Item - Alerts -->
-          <img class="profile-rounded ml-3"
-               src="/assets/img/addantlogowhite.svg">
+          <li class="nav-item dropdown no-arrow mx-1">
+            <a class="nav-link dropdown-toggle clicker" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-bell fa-fw"></i>
+
+
+              <script>
+                $('.clicker').click(function () {
+                  $('body').toggleClass('overlay');
+                });
+              </script>
+
+              <style>
+                .overlay {
+                  position: absolute;
+                  /* color with alpha transparency */
+                  background-color: rgba(0, 0, 0, 0.3) !important;
+                  /* stretch to screen edges */
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                }
+              </style>
+              <!-- Counter - Alerts -->
+              <span class="badge badge-danger badge-counter">3+</span>
+            </a>
+            <!-- Dropdown - Alerts -->
+            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+              <h6 class="dropdown-header">
+                Alerts Center
+              </h6>
+              <a class="dropdown-item d-flex align-items-center">
+                <div>
+                  <div class="small text-gray-500">November 19, 2022</div>
+                  <span class="font-weight-bold">Ranjith applied for job</span>
+                </div>
+              </a>
+              <a class="dropdown-item d-flex align-items-center">
+                <div>
+                  <div class="small text-gray-500">November 20, 2022</div>
+                  <span class="font-weight-bold">Noor shaik want to contact you</span>
+                </div>
+              </a>
+              <a class="dropdown-item d-flex align-items-center">
+                <div>
+                  <div class="small text-gray-500">December 21, 2022</div>
+                  <span class="font-weight-bold">Chakri applied for job</span>
+                </div>
+              </a>
+              <a class="dropdown-item d-flex align-items-center">
+                <div>
+                  <div class="small text-gray-500">December 22, 2022</div>
+                  <span class="font-weight-bold">Navin applied for job</span>
+                </div>
+              </a>
+            </div>
+          </li>
+
           <div class="topbar-divider d-none d-sm-block"></div>
 
-
-          <!--8206 css-->
           <!-- Nav Item - User Information -->
           <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" id="userDropdown" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+              <span class="mr-2 d-none d-lg-inline text-gray-600 small">Addant Admin</span>
 
               <img class="img-profile profile-round-circle"
                    src="/assets/img/undraw_profile.svg">
             </a>
             <!-- Dropdown - User Information -->
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                Profile
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                Settings
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                Activity Log
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                Logout
+              </a>
+            </div>
 
           </li>
+          <!-- Dropdown - User Information -->
+
+
+
+
         </ul>
 
       </nav>
+      <!-- End of Topbar -->
+      <!-- Begin Page Content -->
 
       <div class="container-fluid">
-
-        <router-outlet></router-outlet>
-        <!--<app-blog></app-blog>-->
+        <app-blog></app-blog>
       </div>
-
-
-
-
+      <!-- End of Main Content -->
+      <!-- Footer -->
       <footer class="sticky-footer bg-white">
-        <div class="container mx-auto">
+        <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>© 2022 Addant Systems. All Rights Reserved</span>
-
           </div>
         </div>
       </footer>
+      <!-- End of Footer -->
 
-      <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-      </a>
-
-      <!-- Logout Modal-->
-      <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-           aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-              </button>
-            </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-            <div class="modal-footer">
-              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-              <a class="btn btn-primary" href="login.html">Logout</a>
-            </div>
+    </div>
+    <!-- End of Content Wrapper -->
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Bootstrap core JavaScript-->
-
-      <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-      <!-- Core plugin JavaScript-->
-      <script src="/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-      <!-- Custom scripts for all pages-->
-      <script src="/assets/js/admin.min.js"></script>
-
-
-
-
-      <!---------Font awesome-->
-      <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
-
-
-
+  </div>
