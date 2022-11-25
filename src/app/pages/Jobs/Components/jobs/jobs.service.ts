@@ -20,7 +20,7 @@ export class JobsService {
 
   getJob(): Observable<Boolean> {
     try {
-      return this._http.get(`${this._urlToRequest}/api/Position?isAdminCall={true}`, this._httpOptions).pipe(
+      return this._http.get(`${this._urlToRequest}/api/Position?isAdminCall=true`, this._httpOptions).pipe(
         tap((response: any) => {
           if (response.success) {
             console.log("Valid response received from server");

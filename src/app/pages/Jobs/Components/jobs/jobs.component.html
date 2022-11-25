@@ -1,4 +1,3 @@
-
 <div class="container-fluid">
   <div class="container-fluid">
     <div class="table-wrapper">
@@ -35,29 +34,6 @@
                     </p>
                   </div>
                   <div class="container-fluid ">
-
-
-
-
-
-                    <!--  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     <div class="row ">
                       <div class="col ">
                         <div class="mb-3 ">
@@ -69,8 +45,6 @@
                         </div>
                       </div>
                     </div>
-
-
 
                     <div class="row">
                       <div class="col-6">
@@ -92,9 +66,6 @@
                                  formControlName="createdon" />
                         </div>
                       </div>
-
-
-
                       <div class="row">
                         <div class="col-6">
                           <div class="mb-3">
@@ -115,9 +86,6 @@
                         </div>
                       </div>
                     </div>
-
-
-
                     <div class="row">
 
                       <div class="col">
@@ -130,8 +98,6 @@
           </div>
         </div>
       </div>
-
-
       <table class="table table-striped table-hover w-1" style="background-color: #ffff;">
         <thead>
           <tr>
@@ -150,17 +116,15 @@
         </thead>
         <tbody>
           <tr *ngFor="let post of Jobs ">
-            <th>{{post.IdPosition}}</th>
-            <th>{{post.CreatedDate}}</th>
             <th>{{post.Name}}</th>
-            <th>{{post.IsDeleted}}</th>
-            <th>{{post.positionDetailDTOs}}</th>
+            <th>{{post.IdPositionDetail}}</th>
+            <th>{{post.SubHeader}}</th>
+            <th>{{post.SubHeaderContent}}</th>
+           
+            <td>
+              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><img src="/assets/img/eye.svg" data-toggle="tooltip" class="tableicon" title="Edit"></a>
+            </td>
           </tr>
-
-
-
-
-
           <tr>
             <td>
               <!--hi-->
@@ -176,9 +140,6 @@
               <a href="#deleteEmployeeModal" class="delete action-icon" data-toggle="modal"><img src="/assets/img/delete.svg" data-toggle="tooltip" title="Delete"></a>
             </td>
           </tr>
-
-
-
           <tr>
             <td>
               <!--hi-->
@@ -227,17 +188,4 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
-
