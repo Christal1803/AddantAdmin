@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './Components/layout/layout.component';
 import { BlogModule } from '../pages/blog/blog.module';
 import { TestComponent } from './Components/test/test.component';
+import { ContactModule } from '../pages/contact/contact.module';
 
 
 
@@ -13,7 +14,8 @@ import { TestComponent } from './Components/test/test.component';
   ],
   imports: [
     CommonModule,
-    BlogModule
+    BlogModule,
+    ContactModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

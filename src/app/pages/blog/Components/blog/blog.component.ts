@@ -41,7 +41,7 @@ export class BlogComponent implements OnInit {
     message: new FormControl('', Validators.required),
   })
   constructor(private _BlogService: BlogService) { }
-
+                                                        
   ngOnInit(): void {
 
     this.getBlog();
