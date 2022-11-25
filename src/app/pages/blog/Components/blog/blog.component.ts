@@ -120,14 +120,24 @@ export class BlogComponent implements OnInit {
 
       this._BlogService.saveBlog(requestBody).subscribe((response: any) => {
         if (response) {
+          console.log(response);
         } else {
           console.log("hello error")
 
         }
       });
+
+    this._BlogService.saveBlogImage(requestBody).subscribe((response: any) => {
+
+      if (response) {
+      } else {
+        console.log("hello error")
+
+      }
+    });
     //}
   }
-
+  
   saveEnquiry() {
     debugger
     //if (this.form.valid) {

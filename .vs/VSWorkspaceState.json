@@ -4,12 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\pages",
-    "\\src\\app\\pages\\contact",
-    "\\src\\app\\pages\\contact\\enquiry",
-    "\\src\\app\\pages\\lifeataddant",
-    "\\src\\app\\shared",
-    "\\src\\app\\shared\\Components",
-    "\\src\\app\\shared\\Components\\layout"
+    "\\src\\app\\pages\\blog",
+    "\\src\\app\\pages\\blog\\Components",
+    "\\src\\app\\pages\\blog\\Components\\blog",
+    "\\src\\app\\pages\\Jobs",
+    "\\src\\app\\pages\\Jobs\\Components",
+    "\\src\\app\\pages\\Jobs\\Components\\jobs"
   ],
+  "SelectedNode": "\\src\\app\\pages\\contact\\enquiry\\enquiry.component.ts",
   "PreviewInSolutionExplorer": false
 }

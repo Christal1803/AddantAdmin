@@ -1,194 +1,210 @@
-
-
-
-
-  <!-- Button trigger modal -->
-  <!-- Modal -->
-  <!-- Main Content -->
-
-  <div _ngcontent-sux-c49="" class="table-title"><div _ngcontent-sux-c49="" class="row"><div _ngcontent-sux-c49="" class="col-sm-6"><h2 _ngcontent-sux-c49="">Blog List</h2></div><div _ngcontent-sux-c49="" class="col-sm-6"></div></div></div>
-
-  <div id="content">
-
-    <div class="container-fluid">
-
-      <!-- DataTales Example -->
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-
-          <h6 class="m-0 font-weight-bold text-primary">Contact us List</h6>
+<!-- End of Topbar -->
+<!-- Begin Page Content -->
+<div class="container-fluid">
+  <div class="container-fluid">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-6">
+            <h2>Enquiry List</h2>
+          </div>
+          <!--<div class="col-sm-6">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              NEW BLOG
+            </button>
+          </div>-->
         </div>
-        <div class="card-body">
-          <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-              <thead>
-
-
-                <tr>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Email</th>
-                  <th>
-                    Mobile Number
-                  </th>
-                  <th>Subject</th>
-                </tr>
-
-
-              </thead>
-              <tfoot>
-
-              </tfoot>
-              <tbody>
-
-                <tr>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Email</th>
-                  <th>
-                    Mobile Number
-                  </th>
-                  <th>Subject</th>
-                </tr>
-
-                <tr>
-                  <td>Arjun</td>
-                  <td>Anand</td>
-                  <td>arjun@addant.com</td>
-                  <td>
-                    123456789
-                  </td>
-                  <td>Regarding business</td>
-
-                  <!--<td><i class="fa fa-pencil" aria-hidden="true"></i></td>-->
+      </div>
 
 
 
-                </tr>
-              </tbody>
-            </table>
+
+
+      <table class="table table-striped table-hover w-1" style="background-color: #ffff;">
+        <thead>
+          <tr >
+            <th>First Name</th>
+
+            <th>Last Name</th>
+            <th>MobileNo</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Subject</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+          <tr *ngFor="let Contact of Contacts">
+            <td>{{Contact.FirstName}}</td>
+            <td>{{Contact.LastName}}</td>
+            <td>{{Contact.Mobile}}</td>
+            <td>{{Contact.Email}}</td>
+            <td>{{Contact.Message}}</td>
+            <td>{{Contact.Subject}}</td>
+            <td>
+              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><img src="/assets/img/eye.svg" data-toggle="tooltip" class="tableicon" title="Edit"></a>
+            </td>
+          </tr>
+
+
+
+          <!--<td>Thomas Hardy</td>
+  <td>"hiiiiiiiiiiiiiii.............."</td>
+  <td>0123</td>
+  <td class="d-flex">
+    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><img src="/assets/img/edit.svg" class="tableicon" data-toggle="tooltip" title="Edit"></a>
+
+    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><img src="/assets/img/delete.svg" class="tableicon" data-toggle="tooltip" title="Delete"></a>
+  </td>-->
+          <div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel12" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel12">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </tbody>
+      </table>
+
+
+      <div class="modal fade modal-xl " id="viewbog" data-bs-toggle="modal" data-bs-target="#staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content ">
+
+            <div class="modal-body modal-xl">
+              <div id="content">
+                <div class="container-fluid">
+                  <div>
+
+                    <h1 class="h3 mb-2 text-gray-800"></h1>
+                    <p class="mb-4">
+                    </p>
+                  </div>
+                  <div class="container-fluid ">
+                    <div class="container-fluid mt-3">
+                      <div class="row cardsbanner">
+                        <div class="col-12 blogbanner">
+                          <h1 class="blog-title"><b>Eliminating Barriers to WebRTC Adoption</b></h1>
+
+                          <div class="user-details">
+                            <img class="rounded-circle" alt="avatar1" src="https://mdbcdn.b-cdn.net/img/new/avatars/9.webp" />
+                            <p class="user-name d-inline ml-2">Addant Admin </p> <p class="upload-time d-inline ml-2">Oct 21, 2022 . 10 min read</p>
+                            <p class="share-blog">Share to : <i class="share fa-solid fa-link clipboard"></i> <i class="share fa-brands fa-facebook ml-2"></i><i class="share fa-brands fa-linkedin ml-2"></i></p>
+                          </div>
+
+                          <img src="./assets/img/blog/blog1banner.png" class="img-fluid blog-image">
+                        </div>
+                        <div class="col-12 blogcontent">
+                          <p class="blog-paragraph">The WebRTC conversation, starting as a niche discussion within a few tight-knit circles, has blossomed to a broader conversation that includes both new startups and many traditional telecom vendors. It makes sense, considering the broad trends it follows, including cloud, unified communications, and customer experience. WebRTC has the unique capability to supplement those three by adding a new layer to the interaction lifecycle. WebRTC, fundamentally, is the technology that enables straight browser-to-browser voice and video conversation.</p>
+                          <p class="blog-paragraph">But, as Bolder Thinking’s Vice President of Sales Steve Jackson points out, that’s an ideal that won’t be realized in mainstream business communications for some time for the same reasons VoIP, UC and other technologies have taken time to reach mass adoption: business are hesitant (perhaps even loathe) to replace their legacy technologies that still meet their needs. In some cases, VoIP and UC products have been recently deployed, making replacement or upgrade a financial impossibility. This is where Bolder Thinking comes into play with its 100 percent cloud-based solution that eliminates barriers to WebRTC adoption by addressing the fundamental need to enable WebRTC on the customer end, while connecting it to existing legacy infrastructure on the enterprise and contact center side.</p>
+                          <p class="blog-paragraph">The company’s product routes a WebRTC interaction through its cloud infrastructure, answering the call and transcoding it so it can be seamlessly passed through to customer service agents on whatever existing platform they are on. So, while it doesn’t technically create an end-to-end WebRTC session, it allows businesses to gain the benefits of WebRTC and enable immediate engagement opportunities with customers, without massive investments in infrastructure or integration work for IT teams. Because Bolder Thinking operates completely in the cloud – Jackson boasts that the business actually owns exactly zero servers to run its platform – it is able to provide a dynamically scalable solution that allows customer service organizations to increase and reduce agents on the system as needed. “Steady state stuff is easy,” he says.</p>
+                          <p class="blog-paragraph">“It’s the unplanned events that are fraught with danger. What we do is make sure every call gets answered – there are no fast-busy signals – then [the business] determines how each call is routed to agents or IVRs or answering systems.” One of the key benefits to being able to actually answer and route each and every call is reduced abandon-rates – and the resulting increase in business volume. In addition, Bolder Thinking is helping drive WebRTC adoption by creating a low barrier to entry, Web-enabling voice on the customer side without necessitating major changes on the agent end. “We think it makes a lot of sense for almost any business,” concludes Jackson. He’s right. Not only do the economics make sense, but the ability to further deliver on the promise of UC – anywhere, any device, any network – has massive implications for an enhanced customer experience. If there’s one thing evident in today’s society, it’s that the Millennial Generation wants simple and intuitive interactions – not complex with long wait times. WebRTC and Bolder Thinking are making that a reality.</p>
+
+                        </div>
+
+
+                        <h4 class="mb-4"><b>Related Blogs</b></h4>
+
+
+                        <div class="col-sm-6 col-md-6 col-lg-6 solutionmircocard">
+
+                          <div class="card">
+                            <img src="./assets/img/blog/blog2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <div class="user-details">
+                                <img class="rounded-circle" alt="avatar1" src="https://mdbcdn.b-cdn.net/img/new/avatars/9.webp" /> <p class="user-name d-inline ml-2">Addant Admin .</p> <p class="upload-time d-inline ml-2"> 10 min read</p>
+                              </div>
+                              <h6 class="card-title mt-3">WebRTC Real-time Communication</h6>
+                              <p class="card-text">Real-time communication without plugins Imagine a world where your phone, TV and computer could all communicate...</p>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="col-sm-6 col-md-6 col-lg-6 solutionmircocard">
+
+                          <div class="card">
+                            <img src="./assets/img/blog/blog3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <div class="user-details">
+                                <img class="rounded-circle" alt="avatar1" src="https://mdbcdn.b-cdn.net/img/new/avatars/9.webp" /> <p class="user-name d-inline ml-2">Addant Admin .</p> <p class="upload-time d-inline ml-2"> 10 min read</p>
+                              </div>
+
+                              <h6 class="card-title  mt-3">Around Me in a City</h6>
+                              <p class="card-text">Whenever you go in any City, one most common thing that you have in your mind is to find your favorite restaurant/fast...</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <script>
+                      var $temp = $("<input>");
+                      var $url = $(location).attr('href');
+
+                      $('.clipboard').on('click', function () {
+                        $("body").append($temp);
+                        $temp.val($url).select();
+                        document.execCommand("copy");
+                        $temp.remove();
+                        $("p").text("URL copied!");
+                      })
+                    </script>
+
+
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
+
+      <div class="clearfix">
+        <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+        <ul class="pagination">
+          <li class="page-item disabled"><a href="#">Previous</a></li>
+          <li class="page-item"><a href="#" class="page-link">1</a></li>
+          <li class="page-item"><a href="#" class="page-link">2</a></li>
+          <li class="page-item active"><a href="#" class="page-link">3</a></li>
+          <li class="page-item"><a href="#" class="page-link">4</a></li>
+          <li class="page-item"><a href="#" class="page-link">5</a></li>
+          <li class="page-item"><a href="#" class="page-link">Next</a></li>
+        </ul>
+      </div>
+
+
+
+
     </div>
-    <!-- /.container-fluid -->
-
   </div>
-  <!-- End of Main Content -->
-
-  <table class="table table-striped table-hover w-1" style="background-color: #ffff;">
-    <thead>
-      <tr >
-        <th>
-          <!--<span class="custom-checkbox">
-            <input type="checkbox" id="selectAll">
-            <label for="selectAll"></label>
-          </span>-->
-        </th>
-        <th> Name</th>
-        <th>Email</th>
-
-        <th>Mobile.No</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <!--<span class="custom-checkbox">
-            <input type="checkbox" id="checkbox1" name="options[]" value="1">
-            <label for="checkbox1"></label>
-          </span>-->
-        </td>
-        <td>Thomas Hardy</td>
-
-        <td>Thomas Hardy</td>
-        <td>20/12/2022</td>
-        <td class="d-flex">
-          <a href="#editEmployeeModal" class="edit" data-toggle="modal"><img src="/assets/img/edit.svg" data-toggle="tooltip" title="Edit"></a>
-
-          <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><img src="/assets/img/delete.svg" data-toggle="tooltip" title="Delete"></a>
-        </td>
+</div>
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>
 
 
-      </tr>
-      <tr>
-        <td>
-          <!--<span class="custom-checkbox">
-            <input type="checkbox" id="checkbox2" name="options[]" value="1">
-            <label for="checkbox2"></label>
-          </span>-->
-        </td>
-        <td>Thomas Hardy </td>
 
-        <td>Dominique Perrier</td>
-        <td>20/12/2022</td>
-        <td>
-          <a href="#editEmployeeModal" class="edit" data-toggle="modal"><img src="/assets/img/edit.svg" data-toggle="tooltip" title="Edit"></a>
-
-          <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><img src="/assets/img/delete.svg" data-toggle="tooltip" title="Delete"></a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <!--<span class="custom-checkbox">
-            <input type="checkbox" id="checkbox3" name="options[]" value="1">
-            <label for="checkbox3"></label>
-          </span>-->
-        </td>
-        <td>Thomas Hardy</td>
-
-        <td>Maria Anders</td>
-        <td>20/12/2022</td>
-        <td>
-          <a href="#editEmployeeModal" class="edit" data-toggle="modal"><img src="/assets/img/edit.svg" data-toggle="tooltip" title="Edit"></a>
-
-          <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><img src="/assets/img/delete.svg" data-toggle="tooltip" title="Delete"></a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <!--<span class="custom-checkbox">
-            <input type="checkbox" id="checkbox4" name="options[]" value="1">
-            <label for="checkbox4"></label>
-          </span>-->
-        </td>
-        <td>Thomas Hardy</td>
-
-        <td>Fran Wilson</td>
-        <td>20/12/2022</td>
-        <td>
-          <a href="#editEmployeeModal" class="edit" data-toggle="modal"><img src="/assets/img/edit.svg" data-toggle="tooltip" title="Edit"></a>
-
-          <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><img src="/assets/img/delete.svg" data-toggle="tooltip" title="Delete"></a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <!--<span class="custom-checkbox">
-            <input type="checkbox" id="checkbox5" name="options[]" value="1">
-            <label for="checkbox5"></label>
-          </span>-->
-        </td>
-        <td>Thomas Hardy</td>
-
-        <td>Martin Blank</td>
-        <td>20/12/2022</td>
-        <td>
-          <a href="#editEmployeeModal" class="edit" data-toggle="modal"><img src="/assets/img/edit.svg" data-toggle="tooltip" title="Edit"></a>
-          <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><img src="/assets/img/delete.svg" data-toggle="tooltip" title="Delete"></a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-
-  <ul class="list-group">
-    <li *ngFor="let contact of Contacts"
-        class="list-group-item">
-      {{ contact.title }}
-    </li>
-  </ul>
 
 

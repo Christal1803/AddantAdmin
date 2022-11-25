@@ -12,6 +12,9 @@ import { EnquiryComponent } from './enquiry/enquiry.component';
   imports: [
     CommonModule,
     ContactRoutingModule
+  ],
+  exports: [
+    EnquiryComponent
   ]
 })
 export class ContactModule { }
